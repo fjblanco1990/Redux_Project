@@ -1,0 +1,20 @@
+<h3>Contador Hijo</h3>
+<h4> {{ contador }}</h4>
+
+<div class="row text-center">
+    <div class="col">
+        <button class="btn btn-primary" (click)="Multiplicar()">Multiplicar</button>
+        <button class="btn btn-info" (click)="Dividir()">Dividir</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row text-center">
+    <div class="col">
+        <!--con [contador] escuchan los cambios desde el padre y el hijo-->
+        <!-- (contadorCambio)="resetNieto($event)" -->
+        <!-- (contadorCambio)="contador = $event" -->
+        <app-nieto [contador]="contador" (cambioContadorHijo)="resetNieto($event)"></app-nieto>
+    </div>
+</div>
