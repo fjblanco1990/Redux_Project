@@ -35,5 +35,6 @@ export class AppComponent {
     this.store.dispatch(actions.drecrementar());
   }
 
+  //Comentario
 
 }
