@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AppState } from './app.reducers';
 import * as actions from './contador/contador.actions';
 
 //se debe llamar igual que la variable obeto del appModule
-interface AppState {
-  contadorApp: number
-}
+// interface AppState {
+//   contadorApp: number
+// }
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
-})
+}) 
 export class AppComponent {
 
   contador!: number;
@@ -27,14 +28,11 @@ export class AppComponent {
 
   Incrementar() {
     // this.contador = this.contador + 1;
-    this.store.dispatch(actions.incrementar());
+    this.store.dispatch(actions.incrementar({ numeroIncre: 1 }));
   }
 
   Drecrementar() {
     // this.contador = this.contador - 1;
-    this.store.dispatch(actions.drecrementar());
+    this.store.dispatch(actions.drecrementar({ numeroDecre: 1 }));
   }
-
-  //Comentario
-
 }

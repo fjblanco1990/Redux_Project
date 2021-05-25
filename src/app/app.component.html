@@ -14,10 +14,12 @@
 
 <hr>
 
-<!-- <div class="row text-center">
-    <div class="col"> -->
-<!--con [contador] se envian los datos al componente hijo-->
-<!--El escucha los cambios desde el hijo y nieto -->
-<!-- <app-hijo [contador]="contador" (cambioContadorHijo)="contador = $event"></app-hijo>
+<div class="row text-center">
+    <div class="col">
+        <!--con [contador] se envian los datos al componente hijo-->
+        <!--El escucha los cambios desde el hijo y nieto -->
+        <!-- [contador]="contador" (cambioContadorHijo)="contador = $event" -->
+        <app-hijo></app-hijo>
+        <!--Asi se usa con el patron Reduzx ngrx-->
     </div>
-</div> -->
+</div>
